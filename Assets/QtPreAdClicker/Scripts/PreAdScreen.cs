@@ -56,12 +56,11 @@ public class PreAdScreen : MonoBehaviour
 
     public void ShowRewardedAdClicker(Action onRewarded, Action onOpen = null, Action onClose = null)
     {
-        if (Advertisement.AdvertisementIsAvailable)
-            StartCoroutine(AdTimer(() => Advertisement.ShowVideoAd(() =>
-            {
-                StopClicker();
-                onOpen?.Invoke();
-            },onRewarded, onClose)));
+        StartCoroutine(AdTimer(() => Advertisement.ShowVideoAd(() =>
+        {
+            StopClicker();
+            onOpen?.Invoke();
+        },onRewarded, onClose)));
     }
     
     private IEnumerator AdTimer(Action adCallback)

@@ -19,7 +19,7 @@ public class PreAdClicker : MonoBehaviour
     
     private bool spawning;
     
-    public static int MoneyPerClick => 123; // Set your score per click here
+    public static int MoneyPerClick => 69; // Set your score per click here
 
     public static readonly UnityEvent<GameObject> ObjectClicked = new ();
 
