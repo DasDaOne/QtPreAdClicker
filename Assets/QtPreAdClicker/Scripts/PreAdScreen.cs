@@ -51,7 +51,7 @@ public class PreAdScreen : MonoBehaviour
             {
                 StopClicker();
                 onOpen?.Invoke();
-            }, onClose)));
+            }, onClose, s => OnAdvertError(s, onClose), () => OnAdvertOffline(onClose))));
     }
 
     public void ShowRewardedAdClicker(Action onRewarded, Action onOpen = null, Action onClose = null)
@@ -60,9 +60,22 @@ public class PreAdScreen : MonoBehaviour
         {
             StopClicker();
             onOpen?.Invoke();
-        },onRewarded, onClose)));
+        },onRewarded, onClose, s => OnAdvertError(s, onClose))));
     }
-    
+
+    private void OnAdvertError(string error, Action onClose)
+    {
+        Debug.LogWarning($"Advert Error: {error}");
+        StopClicker();
+        onClose?.Invoke();
+    }
+
+    private void OnAdvertOffline(Action onClose)
+    {
+        StopClicker();
+        onClose?.Invoke();
+    }
+
     private IEnumerator AdTimer(Action adCallback)
     {
         WebApplication.CustomValue = true;
