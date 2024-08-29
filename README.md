@@ -6,7 +6,7 @@ Requires [UIParticleSystem](https://github.com/mob-sakai/ParticleEffectForUGUI) 
 Functionality of ads based on [KimicuYandexGames](https://github.com/Kitgun1/KimicuYandexGames)
 
 # Usage
-  - Download and import [Release Package](https://github.com/DasDaOne/QtPreAdClicker/releases/tag/v0.1.0)
+  - Download and import latest package
   - Add [PreAdClickerCanvas Prefab](Assets/QtPreAdClicker/Prefabs/PreAdClickerCanvas.prefab) onto your scene
     - Instanced prefab on your scene should not have any parents, since it has DontDestroyOnLoad inside
   - Replace your advert calls with [ShowInterstitialAdClicker](Assets/QtPreAdClicker/Scripts/PreAdScreen.cs#L47) and [ShowRewardedAdClicker](Assets/QtPreAdClicker/Scripts/PreAdScreen.cs#L57) calls
