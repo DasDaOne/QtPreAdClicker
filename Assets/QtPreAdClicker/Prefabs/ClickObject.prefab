@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 50
-  clickEffect: {fileID: 8533562941691135735, guid: 9cbc14b4d861e0546a46f5e7e7dbc0b6, type: 3}
+  clickEffect: {fileID: 7403818122270312482, guid: 9cbc14b4d861e0546a46f5e7e7dbc0b6, type: 3}
 --- !u!114 &1288911024783171094
 MonoBehaviour:
   m_ObjectHideFlags: 0
